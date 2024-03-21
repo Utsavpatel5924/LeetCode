@@ -1,13 +1,14 @@
-var createCounter = function(n) {
-    
+// Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
+
+const createCounter = function(n) {
     return function() {
-        current = n;
-        current += 1;
-        n = current;
-        return current -= 1;
+        return n + 1;
     };
 };
-    var n;
-    let a = createCounter(2);
 
-console.log(createCounter(a));
+
+ const counter = createCounter(10)
+ // Using console.log here to output returned value
+ console.log(counter()) // 11
+ console.log(counter()) // 11
+ console.log(counter()) // 11
